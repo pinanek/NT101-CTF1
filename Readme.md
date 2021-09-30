@@ -731,7 +731,7 @@ Bài này lại tiếp tục dính đến `cron.d`, và vẫn cách thức tiế
 
 - *Bước 2*: Thực thi một vòng for có chức năng thực thi và đồng thời xóa tất cả các scripts có trong thư mục hiện tại. Tuy nhiên, khi nó gặp script của user `bandit23`, chương trình sẽ timeout **60s** trước khi thực thi nó rồi xóa. 
 
-![Hinh](.\img\23_1.png)
+![Hinh](./img/23_1.png)
 
 Như vậy, dựa vào description ta phải tạo một file `script.sh` thuộc `bandit23` rồi nhét qua `/var/spool/bandit24`. Ta tạo một directory `/tmp/file/` để thực hiện lưu đoạn script cần viết vào đó. 
 
