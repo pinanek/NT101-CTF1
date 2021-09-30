@@ -1,4 +1,4 @@
-# [Bandit](https://overthewire.org/wargames/bandit/)
+# [Bandit](https://overthewire.org/wargames/bandit/) - PickMeBoiz 
 
 ## Level 0
 
