@@ -631,7 +631,7 @@ bandit0@bandit:~$
 
 ---
 
-- Dowload repository từ ssh://bandit27-git@localhost/home/bandit27-git/rep
+- Download repository từ ssh://bandit27-git@localhost/home/bandit27-git/repo
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled.png>)
 
