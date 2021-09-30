@@ -879,7 +879,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled.png>)
 
-- Dùng lệnh `cat` \*\*\*\*để đọc file README.md trong đường dẫn repo
+- Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%201.png>)
 
@@ -973,7 +973,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%207.png>)
 
-- Dùng lệnh `cat` để đọc file [README.md](http://README.md) trong đường dẫn repo
+- Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
 ![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image%202.png>)
 
@@ -1005,7 +1005,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%208.png>)
 
-- Dùng lệnh `cat` \*\*\*\*để đọc file README.md trong đường dẫn repo
+- Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%209.png>)
 
