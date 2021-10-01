@@ -1059,4 +1059,4 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2014.png>)
 
-> Ta thu được password cho bandit33: `c9c3199ddf4121b10cf581a98d51caee1`
+> Ta thu được password cho bandit33: `c9c3199ddf4121b10cf581a98d51caee`
