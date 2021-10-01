@@ -883,7 +883,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%201.png>)
 
-> Ta thu được password cho bandit28 : 0ef186ac70e04ea33b4c1853d2526fa2
+> Ta thu được password cho bandit28 : `0ef186ac70e04ea33b4c1853d2526fa2`
 
 ## Level 28 → 29
 
@@ -919,7 +919,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ---
 
-> Ta thu được password cho bandit29 : bbc96594b4e001778eee9975372716b2
+> Ta thu được password cho bandit29 : `bbc96594b4e001778eee9975372716b2`
 
 ---
 
@@ -927,13 +927,13 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ---
 
-`git branch -a`: xem toàn bộ các nhành của repository
+`git branch -a`: xem toàn bộ các nhánh của repository
 
-`git checkout <branch_name>`: chuyển đến ngánh khác trong repository
+`git checkout <branch_name>`: chuyển đến nhánh khác trong repository
 
 ---
 
-- Dowload Repository từ ssh://bandit29-git@localhost/home/bandit29-git/repo
+- Download Repository từ ssh://bandit29-git@localhost/home/bandit29-git/repo
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%205.png>)
 
@@ -943,19 +943,19 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 > Nội dung của file README.md có thể gợi ý cho chúng ta biết là password cho user bandit30 không được khởi tạo ở đây. Do trong repo chỉ có file README.md và một số file config được ẩn đi nên chúng ta có thể hiểu là mật khẩu đã được khởi tạo ở một nhánh khác
 
-- Dùng lệnh `git branch -a` để xem toàn bộ ngánh của repository
+- Dùng lệnh `git branch -a` để xem toàn bộ nhánh của repository
 
 ![image1.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image1.png>)
 
-> Ta thấy được ngoài ngánh master được mặc định tải về còn có các ngánh khác. Ta sẽ tiếp tục chuyển sang các ngánh đó để tìm kiếm thêm thông tin
+> Ta thấy được ngoài nhánh master được mặc định tải về còn có các nhánh khác. Ta sẽ tiếp tục chuyển sang các nhánh đó để tìm kiếm thêm thông tin
 
-- Dùng lệnh `git checkout <branch_name>` để kiểm tra từng ngánh
+- Dùng lệnh `git checkout <branch_name>` để kiểm tra từng nhánh
 
 ![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image%201.png>)
 
 ---
 
-> Ta thu được password cho bandit30 : 5b90576bedb2cc04c86a9e924ce42faf
+> Ta thu được password cho bandit30 : `5b90576bedb2cc04c86a9e924ce42faf`
 
 ---
 
@@ -977,7 +977,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image%202.png>)
 
-> Lần này README.md không cho chúng ta bất cứ thông tin nào về password và cũng không có thư mục nào khác. Nên chúng ta lần lượt check các commit, tag, các ngánh khác và cuối cùng là check các file config của từng nhánh
+> Lần này README.md không cho chúng ta bất cứ thông tin nào về password và cũng không có thư mục nào khác. Nên chúng ta lần lượt check các commit, tag, các nhánh khác và cuối cùng là check các file config của từng nhánh
 
 - Dùng lệnh `git tag -l` để hiện các tag
 
@@ -987,7 +987,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![image2.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image2.png>)
 
-> Ta thu được password cho bandit31: 56a9bf19c63d650ce78e6ec0354ee45e
+> Ta thu được password cho bandit31: `56a9bf19c63d650ce78e6ec0354ee45e`
 
 ## Level 31 → 32
 
@@ -1059,4 +1059,4 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 ![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2014.png>)
 
-> Ta thu được password cho bandit33: c9c3199ddf4121b10cf581a98d51caee
+> Ta thu được password cho bandit33: `c9c3199ddf4121b10cf581a98d51caee1`
