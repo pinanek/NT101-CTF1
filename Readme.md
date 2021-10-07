@@ -12,7 +12,7 @@ Bạn có thể tìm thấy @username của ID Twitter này 44196397. Format fla
 
 - Chúng ta sử dụng trang web <https://tweeterid.com/> để tra cứu Twitter @username dựa trên ID
 
-![Image](.\image\internet_love_image_1.png)
+![Image](image\internet_love_image_1.png)
 
 ---
 
