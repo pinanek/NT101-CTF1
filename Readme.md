@@ -115,7 +115,7 @@ Hãy giúp tôi nào!!! Tôi đang hoàn thành bài kiểm tra và tôi đang c
 
 - Vào đường dẫn đó và tiếp tục các giáo sư bằng các thông tin trên ta thu được một người hợp lệ
 
-![Image](./image/thien_tai_bat_hao_hinh2.png)
+![Image](image/thien_tai_bat_hoa_hinh2.png)
 
 ---
 
