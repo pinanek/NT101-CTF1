@@ -113,13 +113,13 @@ Hãy giúp tôi nào!!! Tôi đang hoàn thành bài kiểm tra và tôi đang c
 
 ![Image](./image/thien_tai_bat_hao_image_1.png)
 
-- Vào đường dẫn đó và tiếp tục các giáo sư bằng các thông tin trên ta thu được một người hợp lệ (brute force đến chết)
+- Vào đường dẫn đó và tiếp tục các giáo sư bằng các thông tin trên ta thu được một người hợp lệ
 
-![Image](./image/thien_tai_bat_hao_image_2.png)
+![Image](./image/thien_tai_bat_hao_hinh2.png)
 
 ---
 
-> Flag thu được là: `flag{Alina-Bucur}`
+> Flag thu được là: `flag{Daniel-Kane}`
 
 ---
 
@@ -155,9 +155,11 @@ Do you like number 17076? Do you like listening to music? Format flag: flag{....
 ---
 
 ## Địa lý lớp 6
+---
 
 ***Description***
-Tìm tọa độ của mỗi vị trí. Format flag: flag{vĩ độ hình 1, kinh độ hình 1, vĩ độ hình 2, kinh độ hình 2}. Vĩ độ và kinh độ chính xác tới 3 chữ số thập phân sau dấu phẩy và không chứa khoảng cách trong flag.
+
+Tìm tọa độ của mỗi vị trí. Format flag: `flag{vĩ độ hình 1, kinh độ hình 1, vĩ độ hình 2, kinh độ hình 2}`.Vĩ độ và kinh độ chính xác tới 3 chữ số thập phân sau dấu phẩy và không chứa khoảng cách trong flag.
 
 [picture1](./image/picture1.png)
 
@@ -167,12 +169,41 @@ Tìm tọa độ của mỗi vị trí. Format flag: flag{vĩ độ hình 1, kin
 
 ***Writeup***
 
+Đây là OSINT cho image nên đầu tiên ta thử sử dụng [Google Images](https://images.google.com/?gws_rd=ssl) với hình đầu tiên. Tuy nhiên ta không tìm thấy dấu hiệu gì liên quan.
 
+![Hinh1](img/Hinh1.png)
 
+Tiếp tục tra tiếp bằng [Bing Images](https://www.bing.com/?scope=images&nr=1&FORM=NOFORM) thì xuất hiện một chiếc link [Malta | Where is this](https://www.where-is-this.com/index/view/14890.html) thú vị.
 
----
+![Hinh2](img/Hinh2.png)
 
->Flag thu được: `flag{Osint-is-cool}`
+Truy cập link trên thì rõ ràng ta đã thấy được rõ ràng đó chính là nơi cần tìm, có địa chỉ ở Malta với `vĩ độ/kinh độ : 35.898/14.518` (do lấy 3 chữ số sau số phẩy)
+
+![Hinh2](img/Hinh3.png)
+
+Như vậy ta đã tìm được 1 nửa flag với format: `flag{35.898,14.518,vĩ độ hình 2,kinh độ hình 2}`. Típ tục cuộc hành trình với hình 2. Thử search bằng [Google Images](https://images.google.com/?gws_rd=ssl) hay các search engine khác không có kết quả gì khả nghi.
+
+Để ý một chút thì thấy có điểm đặc biệt trong bức hình là 2 biểu tượng trên tường của ngôi nhà. Cắt nhỏ ảnh hai biểu tượng đó đi search image bằng Google, Bing,... vẫn không cho kết quả gì cho đến khi gặp `Yandex` =)). Có thể thấy phần kết quả đề xuất có xuất hiện 2 cái biểu tượng y chang mà còn rõ chữ hơn. Đây là biểu tượng trên lá cờ của nước San Marino.
+
+![Hinh2](img/hinh4.png)
+
+Sau một hồi kiểm tra các đường link liên quan đến các ảnh đề xuất, thì đến ảnh thứ 3 có [link tiếng Nga](http://lolas-photo.blogspot.com/2011/08/ii.html?m=1) thì phải :D 
+
+![Hinh2](img/hinh4_1.png)
+
+Đây rõ ràng là bài mô tả vẻ đẹp xung quanh nơi cần tìm trong bức ảnh số 2. Lướt xuống một hồi nữa thì thấy tòa nhà như hình dưới với dòng chữ to đùng `Divo Marino ...`
+
+![Hinh2](img/hình5.png)
+
+Sau một thời gian search địa điểm này thấy chưa liên quan đến hình số 2 lắm nên em quyết định nhảy vô google maps để xem với từ khóa `Divo Marino` thì ta đã tìm được địa chỉ của tòa nhà đó. Nhìn toàn thể khu sinh thái xung quanh tòa nhà đó thì thấy xuất hiện một nơi xuất hiện gạch màu đỏ (nơi kẻ vạch đỏ trong hình dưới) giống với hình số 2.
+
+![Hinh2](img/InkedHinh6_LI.jpg)
+
+Thực hiện nhảy xuống địa điểm đó tham quan thì yeaaa đó chính là nơi ta cần tìm. Đứng ngay góc chụp tương tự hình số 2 ta thấy được vĩ độ và kinh độ lần lượt là **43.937652** và **12.4458725** của địa điểm trên URL.
+
+![Hinh2](img/Hinh7.png)
+
+> Sau một hồi để ý phải làm tròn đến chữ số thứ 3 sau dấu phẩy ta submit thành công: `flag{35.898,14.518,43.938,12.446}`
 
 ---
 
