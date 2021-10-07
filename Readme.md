@@ -51,7 +51,7 @@ I like Bot gg/GXtshq7Qwe format flag: flag{namebot}
 
 Sing with me: You are very beautiful.... format flag: flag{name-of-this-place}
 
-[eyes.jpg](.\image\eyes.jpg)
+[eyes.jpg](image\eyes.jpg)
 
 ---
 
