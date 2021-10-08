@@ -4,13 +4,13 @@
  
 ***Desciption***
  
-Bạn có thể tìm thấy @username của ID Twitter này 44196397. Format flag: flag{username}
+Bạn có thể tìm thấy @username của ID Twitter này 44196397. Format flag: flag{username}.
  
 ---
  
 ***Writeup***
  
-- Chúng ta sử dụng trang web <https://tweeterid.com/> để tra cứu Twitter @username dựa trên ID
+- Chúng ta sử dụng trang web <https://tweeterid.com/> để tra cứu Twitter @username dựa trên ID.
  
 ![Image](image/internet_love_image_1.png)
  
@@ -24,22 +24,22 @@ Bạn có thể tìm thấy @username của ID Twitter này 44196397. Format fla
  
 ***Desciption***
  
-I like Bot gg/GXtshq7Qwe format flag: flag{namebot}
+I like Bot gg/GXtshq7Qwe format flag: flag{namebot}.
  
 ---
  
 ***Writeup***
  
-- Ta search gợi ý `gg/GXtshq7Qwe` trên google và ta thu được một số thông tin đường dẫn: <https://discord.gg/GXtshq7Qwe>
+- Ta search gợi ý `gg/GXtshq7Qwe` trên google và ta thu được một số thông tin đường dẫn: <https://discord.gg/GXtshq7Qwe>.
  
  
 ![Image](image/contact_image_1.png)
  
-- Sau khi vào đường link ta được di chuyển sang trang <https://discord.com/invite/GXtshq7Qwe> và ở đó thì ta có được lời mời đến từ knapstack
+- Sau khi vào đường link ta được di chuyển sang trang <https://discord.com/invite/GXtshq7Qwe> và ở đó thì ta có được lời mời đến từ knapstack.
  
 ![Image](image/contact_image_2.png)
  
-- Tiếp tục vào discord thì ta thấy được một con bot tên là `Tickets`
+- Tiếp tục vào discord thì ta thấy được một con bot tên là `Tickets`.
  
 ![Image](image/contact_image_3.png)
  
@@ -53,7 +53,7 @@ I like Bot gg/GXtshq7Qwe format flag: flag{namebot}
  
 ***Desciption***
  
-Sing with me: You are very beautiful.... format flag: flag{name-of-this-place}
+Sing with me: You are very beautiful.... format flag: flag{name-of-this-place}.
  
 [eyes.jpg](image/eyes.jpg)
  
@@ -61,15 +61,15 @@ Sing with me: You are very beautiful.... format flag: flag{name-of-this-place}
  
 ***Writeup***
  
-- Đầu tiên, ta sử dụng <https://yandex.com> để tìm kiếm thông tin về hình ảnh đã cho
+- Đầu tiên, ta sử dụng <https://yandex.com> để tìm kiếm thông tin về hình ảnh đã cho.
  
 ![Image](image/eyes_image_1.png)
  
-- Ta tiếp tục sử dụng các thông tin và đường dẫn bên dưới để tiếp tục tìm kiếm ta thu được một số địa danh
+- Ta tiếp tục sử dụng các thông tin và đường dẫn bên dưới để tiếp tục tìm kiếm ta thu được một số địa danh.
  
 ![Image](image/eyes_image_2.png)
  
-- Ta tiếp tục tìm kiếm dựa trên các địa danh thì ta thu được hồ T'Nưng là nơi xuất phát của ảnh gợi ý
+- Ta tiếp tục tìm kiếm dựa trên các địa danh thì ta thu được hồ T'Nưng là nơi xuất phát của ảnh gợi ý.
  
 ![Image](image/eyes_image_3.png)
  
@@ -96,19 +96,19 @@ Hãy giúp tôi nào!!! Tôi đang hoàn thành bài kiểm tra và tôi đang c
  
 ***Background***
  
-Để có thể làm được bài bài này thì chúng ta còn có một chút hiểu biết về [google hacking](https://whitehat.vn/threads/google-hacking-kien-thuc-co-ban-ma-pentester-thuong-bo-qua.8092/)
+Để có thể làm được bài bài này thì chúng ta còn có một chút hiểu biết về [google hacking](https://whitehat.vn/threads/google-hacking-kien-thuc-co-ban-ma-pentester-thuong-bo-qua.8092/).
  
-- Từ khóa `site:` để giới hạn kết quả trả về ở một số website cụ thể
+- Từ khóa `site:` để giới hạn kết quả trả về ở một số website cụ thể.
  
-- sử dụng biểu tượng `""` để kết quả trả về phải có chính xác từ cần tìm kiếm
+- sử dụng biểu tượng `""` để kết quả trả về phải có chính xác từ cần tìm kiếm.
  
 - `()` được sử dụng để nhóm các cụm từ tìm kiếm và kiểm soát logic tìm kiếm của truy vấn.
  
 - `|`  sẽ trả về kết quả tìm kiếm phù hợp với các cụm từ ở hai bên của đường ống dẫn. Giống như cách viết "HOẶC" giữa các cụm từ tìm kiếm.
  
->NOTE: Có thể phải tìm kiếm trên nhiều trang web khác nhau nêu các các trang đó chưa thông tin giống như trong truy vấn
+>NOTE: Có thể phải tìm kiếm trên nhiều trang web khác nhau nêu các các trang đó chưa thông tin giống như trong truy vấn.
  
-- Dựa vào đề bài thì chúng ta sẽ sử dụng một số format sau để tìm kiếm: "Assistant Professor", "Computer Science", "Mathematics" và cụm từ có liên quan UC San Diego. Ngoài ra chúng ta cũng cần phải tìm kiếm các cụm từ đồng nghĩa có khả năng như "Associate Professor" <=> "Assistant Professor" và ta cũng có thể loại bỏ dần các cụm như "Computer Science", UC San Diego nếu khó khăn trong việc tìm kiếm
+- Dựa vào đề bài thì chúng ta sẽ sử dụng một số format sau để tìm kiếm: "Assistant Professor", "Computer Science", "Mathematics" và cụm từ có liên quan UC San Diego. Ngoài ra chúng ta cũng cần phải tìm kiếm các cụm từ đồng nghĩa có khả năng như "Associate Professor" <=> "Assistant Professor" và ta cũng có thể loại bỏ dần các cụm như "Computer Science", UC San Diego nếu khó khăn trong việc tìm kiếm.
 ---
  
 ***Writeup***
@@ -117,7 +117,7 @@ Hãy giúp tôi nào!!! Tôi đang hoàn thành bài kiểm tra và tôi đang c
  
 ![Image](image/thien_tai_bat_hao_image_1.png)
  
-- Vào đường dẫn đó và tiếp tục các giáo sư bằng các thông tin trên ta thu được một người hợp lệ
+- Vào đường dẫn đó và tiếp tục các giáo sư bằng các thông tin trên ta thu được một người hợp lệ.
  
 ![Image](image/thien_tai_bat_hoa_hinh2.png)
  
@@ -132,7 +132,7 @@ Hãy giúp tôi nào!!! Tôi đang hoàn thành bài kiểm tra và tôi đang c
  
 ***Description***
  
-Do you like number 17076? Do you like listening to music? Format flag: flag{....}
+Do you like number 17076? Do you like listening to music? Format flag: flag{....}.
  
 [music_2.txt](file/music_2.txt)
  
@@ -144,7 +144,7 @@ Do you like number 17076? Do you like listening to music? Format flag: flag{....
  
 ![Image](image/music_image_1.png)
  
-- Tìm kiếm v=5m4QcGCBoC0 ta thu được một đường dẫn đến youtube
+- Tìm kiếm v=5m4QcGCBoC0 ta thu được một đường dẫn đến youtube.
  
 ![Image](image/music_image_2.png)
  
@@ -223,11 +223,11 @@ Cách đây không lâu, một admin của diễn đàn công nghệ trong 1 l�
  
 ***Writeup***
  
-- Từ các thử thách `Music` ta biết được `v=BtulL3oArQw` sẽ nằm trong một link youtube
+- Từ các thử thách `Music` ta biết được `v=BtulL3oArQw` sẽ nằm trong một link youtube.
  
 ![Image](image/admin_1.png)
  
-- Sau một lúc tìm kiếm thì tương tự trong thử thách `Music` ta phát hiện comment bất thường đến từ bạn Lê Thanh Duẩn và đây cũng tiếp tục là một link youtube
+- Sau một lúc tìm kiếm thì tương tự trong thử thách `Music` ta phát hiện comment bất thường đến từ bạn Lê Thanh Duẩn và đây cũng tiếp tục là một link youtube.
  
 ![Image](image/admin_2.png)
  
@@ -235,15 +235,15 @@ Cách đây không lâu, một admin của diễn đàn công nghệ trong 1 l�
  
 ![Image](image/admin_3.png)
  
-- Tìm kiếm gợi ý `Stirring16/LassPass` trên google nhưng không thu được kết quả nhưng nếu chúng ta tách `stirring16` ra để tim kiếm thì ta sẽ tìm được một user github và user đó có một repository có tên là 'LassPass'
+- Tìm kiếm gợi ý `Stirring16/LassPass` trên google nhưng không thu được kết quả nhưng nếu chúng ta tách `stirring16` ra để tim kiếm thì ta sẽ tìm được một user github và user đó có một repository có tên là 'LassPass'.
  
 ![Image](image/admin_4.png)
  
-- Trong repository đó ta có 3 file cần phần tích 
+- Trong repository đó ta có 3 file cần phần tích.
  
 ![Image](image/admin_5.png)
  
-- Phân tích file `bash` ta thấy được được một dòng lệnh khả nghi
+- Phân tích file `bash` ta thấy được được một dòng lệnh khả nghi.
  
 ![Image](image/admin_6.png)
  
@@ -251,15 +251,15 @@ Cách đây không lâu, một admin của diễn đàn công nghệ trong 1 l�
  
 ![Image](image/admin_7.png)
  
-- Chuyển đến link đo ta thu được một chuỗi mã có khả năng là mã Bas64
+- Chuyển đến link đo ta thu được một chuỗi mã có khả năng là mã Bas64.
  
 ![Image](image/admin_8.png)
  
-- Ta thực hiện decode Bas64 thì lại tiếp tục thu được một link youtube có móc thời gian
+- Ta thực hiện decode Base64 thì lại tiếp tục thu được một link youtube có móc thời gian bị viết ngược lại.
  
 ![Image](image/admin_9.png)
  
-- Nhìn kỹ vào khung video tại thời điểm đó ta thấy được một đoạn mã
+- Nhìn kỹ vào khung video tại thời điểm đó ta thấy được một đoạn mã.
  
 ![Image](image/admin_10.png)
  
@@ -277,31 +277,31 @@ Cách đây không lâu, một admin của diễn đàn công nghệ trong 1 l�
  
 ***Description***
  
-Stirring16 stole our data remotely. But he did reveal his whereabouts on a forum. Where can you find him? Format flag: flag{Street-names}
+Stirring16 stole our data remotely. But he did reveal his whereabouts on a forum. Where can you find him? Format flag: flag{Street-names}.
  
 ---
  
 ***Writeup***
  
-- Do thủ phạm đã để lại dấu vết trên một forum nên `Sitrring16` có khả năng cao là một username nên ta tập trung vào tìm kiếm trên các forum và bỏ qua các dạng file và các trang web tĩnh khác
+- Do thủ phạm đã để lại dấu vết trên một forum nên `Sitrring16` có khả năng cao là một username nên ta tập trung vào tìm kiếm trên các forum và bỏ qua các dạng file và các trang web tĩnh khác.
  
 ![Image](image/can_you_catch_me_image_1.png)
  
-- Do tên khá đặc biệt nên ta dễ dàng tìm thấy thấy được một tài khoản có tên là `Sitrring16` trên [reddit](https://www.reddit.com/user/Sitrring16/) với một post tên là secret nhưng đã bị xóa
+- Do tên khá đặc biệt nên ta dễ dàng tìm thấy thấy được một tài khoản có tên là `Sitrring16` trên [reddit](https://www.reddit.com/user/Sitrring16/) với một post tên là secret nhưng đã bị xóa.
  
 ![Image](image/can_you_catch_me_image_2.png)
  
-- Ta sử dụng trang [Wayback_Machine](https://web.archive.org/web/20210611052223/https://www.reddit.com/user/Sitrring16/comments/nx8621/secret/) để có thể tìm lại bài post đó
+- Ta sử dụng trang [Wayback_Machine](https://web.archive.org/web/20210611052223/https://www.reddit.com/user/Sitrring16/comments/nx8621/secret/) để có thể tìm lại bài post đó.
  
 ![Image](image/can_you_catch_me_image_3.png)
  
->Mặc dù nội dung bài post khá đáng nghi nhưng đó không phải thứ ta cần tìm. Tuy nhiên, ta cũng nhận ra được user này đã thay đổi ảnh đại diện và ảnh nền thành các ảnh khá đáng nghi
+>Mặc dù nội dung bài post khá đáng nghi nhưng đó không phải thứ ta cần tìm. Tuy nhiên, ta cũng nhận ra được user này đã thay đổi ảnh đại diện và ảnh nền thành các ảnh khá đáng nghi.
  
-- Ta tìm kiếm trên ảnh nền của user này (do ảnh khá nhỏ nên có thể zoom lên hoặc vào nguồn của trang và tìm kiếm link ảnh [*here*](https://styles.redditmedia.com/t5_4l1kzw/styles/profileBanner_6bscbd8kqnr71.png?width=1280&height=384&crop=1280:384,smart&s=03692e1792aa9b370b63be987753261ddc2a29be)) và ta phát hiện ra một địa chỉ MAC `d4:9a:a0:de:be:58` có thể là của mục tiêu
+- Ta tìm kiếm trên ảnh nền của user này (do ảnh khá nhỏ nên có thể zoom lên hoặc vào nguồn của trang và tìm kiếm link ảnh [*here*](https://styles.redditmedia.com/t5_4l1kzw/styles/profileBanner_6bscbd8kqnr71.png?width=1280&height=384&crop=1280:384,smart&s=03692e1792aa9b370b63be987753261ddc2a29be)) và ta phát hiện ra một địa chỉ MAC `d4:9a:a0:de:be:58` có thể là của mục tiêu.
  
 ![Image](image/can_you_catch_me_image_4.png)
  
-- Ta sử dụng địa chỉ mac thu được kết hợp với sử dụng trang web <https://www.wigle.net/> thì ta đã tìm ra được địa chỉ thực của mục tiêu
+- Ta sử dụng địa chỉ mac thu được kết hợp với sử dụng trang web <https://www.wigle.net/> thì ta đã tìm ra được địa chỉ thực của mục tiêu.
  
 ![Image](image/can_you_catch_me_image_5.png)
  
@@ -315,7 +315,7 @@ Flag thu được: `flag{Ton-That-Tung}`
  
 ***Description***
  
-A drone captured the location of the wanted hacker After the police arrived, he must have run away and left a message What is that message? (hint:something is wrong wrong) Format flag: flag{a-b-c-d-f}
+A drone captured the location of the wanted hacker After the police arrived, he must have run away and left a message What is that message? (hint:something is wrong wrong) Format flag: flag{a-b-c-d-f}.
  
 [UIT.png](image/UIT.png)
  
@@ -325,7 +325,7 @@ A drone captured the location of the wanted hacker After the police arrived, he 
  
 - Từ hình ảnh gợi ý ta biết được đây là trường Đại học Công nghệ thông tin :))
  
-- Lưu ý rằng trường có 4 tòa A, B, C, D, E nhưng trong flag lại là a-b-c-d-f và dựa vào gợi ý `something is wrong wrong` thì ta có thể hiểu rằng điều sai sẽ nằm ở tòa E của trường
+- Lưu ý rằng trường có 4 tòa A, B, C, D, E nhưng trong flag lại là a-b-c-d-f và dựa vào gợi ý `something is wrong wrong` thì ta có thể hiểu rằng điều sai sẽ nằm ở tòa E của trường.
  
 ![Image](image/message_image_1.png)
  
@@ -335,7 +335,7 @@ A drone captured the location of the wanted hacker After the police arrived, he 
  
 ![Image](image/message_image_3.png)
  
-- Mặc dù cụm `Sai gì đó đúng đúng` vừa đủ số ký tự cho flag nhưng chúng ta vẫn phải brute force đến chết để tìm ra kết quả
+- Mặc dù cụm `Sai gì đó đúng đúng` vừa đủ số ký tự cho flag nhưng chúng ta vẫn phải brute force đến chết để tìm ra kết quả.
  
 ![Image](image/message_image_4.png)
  
