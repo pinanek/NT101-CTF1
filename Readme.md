@@ -30,18 +30,22 @@ I like Bot gg/GXtshq7Qwe format flag: flag{namebot}
 
 ***Writeup***
 
-- Ta search gợi ý   `gg/GXtshq7Qwe` trên google và ta thu được một số thông tin đường dẫn: <https://discord.gg/GXtshq7Qwe>
+- Ta search gợi ý `gg/GXtshq7Qwe` trên google và ta thu được một số thông tin đường dẫn: <https://discord.gg/GXtshq7Qwe>
 
 
 ![Image](image/contact_image_1.png)
 
-- Sau khi vào đường link ta được di chuyên sang trang <https://discord.com/invite/GXtshq7Qwe> và ở đó thì ta có được lời mới từ một bot tên là knapstack
+- Sau khi vào đường link ta được di chuyên sang trang <https://discord.com/invite/GXtshq7Qwe> và ở đó thì ta có được lời mới đến từ knapstack
 
 ![Image](image/contact_image_2.png)
 
+- Tiếp tục vào discord thì ta thấy được một con bot tên là `Tickets`
+
+![Image](image/contact_image_3.png)
+
 ---
 
-> Flag thu được : `flag{knapstack}`
+> Flag thu được : `flag{Tickets}`
 
 ---
 
