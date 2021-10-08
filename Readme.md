@@ -255,7 +255,7 @@ Cách đây không lâu, một admin của diễn đàn công nghệ trong 1 l�
  
 ![Image](image/admin_8.png)
  
-- Ta thực hiện decode Base64 thì lại tiếp tục thu được một link youtube có móc thời gian bị viết ngược lại.
+- Ta thực hiện decode Base64 thì lại tiếp tục thu được một link youtube có mốc thời gian bị viết ngược lại.
  
 ![Image](image/admin_9.png)
  
