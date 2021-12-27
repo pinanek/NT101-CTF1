@@ -635,7 +635,7 @@ To gain access to the next level, you should use the setuid binary in the homedi
 
 Sau khi login vào bandit19, ta thực hiện lệnh `ls` để kiểm tra thì thấy một file `bandit20-do`. Đây là một file [setuid](https://en.wikipedia.org/wiki/Setuid) có thể thực thi những lệnh mà chỉ user bandit20 mới có quyền thực hiện. Thử thực thi `./bandit20-do` thì kết quả trả về là `Run a command as another user`, điều này có nghĩa là mặc dù ta đang là user bandit19 nhưng với file này ta có thể thực thi các lệnh với permission của user bandit20. 
 
-![Hinh](img/19.png)
+![19](img/19.png)
 
 Vậy thì còn chần chờ gì nữa mà không dùng lệnh `cat /etc/bandit_pass/bandit20` cho nó đọc password. 
 
@@ -656,12 +656,12 @@ NOTE: Try connecting to your own network daemon to see if it works as you think
 Sau khi login vào bandit20, tiếp tục `ls` thì xuất hiện file `suconnect`. Thử thực thi file thì kết quả trả về cách dùng với arg là `portnumber`, đồng thời mô tả chức năng của file này là để thực hiện kết nối TCP tới localhost thông qua port đã xác định (thực ra nó giống với lệnh `nc 127.0.0.1 <portnumber>`). 
  
 
-![Hinh](img/20_1.png)
+![20_1](img/20_1.png)
 
 Kết hợp description của đề bài, ta thực hiện truyền file password của bandit20 bằng bind shell qua port bất kỳ, ở đây em chọn port 8888. Khi đó, nó trả về password của bandit21.
 
-![Hinh](img/20_2.png)
-![Hinh](img/20_3.png)
+![20_2](img/20_2.png)
+![20_3](img/20_3.png)
 
 > Ta thu được password cho bandit21 : `gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`
 
@@ -676,11 +676,11 @@ A program is running automatically at regular intervals from cron, the time-base
 
 Sau khi login vào bandit21, ta xem xem thư mục `/etc/cron.d/` có gì. Đây là thư mục chứa các file cấu hình những lệnh hay chương trình sẽ được thực hiện trong thời gian đã set (theo giờ, theo ngày, theo tuần, ...). Bởi vì ta đang đi tìm password cho bandit22 nên ta sẽ xem file `cronjob_bandit22`. Có thể thấy nó sẽ thực thi một file shell script theo mỗi phút. 
 
-![Hinh](img/21_1.png)
+![21_1](img/21_1.png)
 
 Mày mò xem đoạn script đó chứa gì bằng lệnh `cat \usr\bin\cronjob_bandit22.sh`. Hóa ra nó ghi password của bandit22 vào một file trong thư mục tmp sau khi đã cấp quyền bằng `chmod`. Việc còn lại chỉ là xem nội dung password bandit22 bằng lệnh `cat` đơn giản như hình dưới.
 
-![Hinh](img/21_2.png)
+![21_2](img/21_2.png)
 
 
 > Ta thu được password cho bandit22 : `Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`
@@ -698,17 +698,17 @@ NOTE: Looking at shell scripts written by other people is a very useful skill. T
 
 Tương tự như level trên, lần này ta sẽ xem file `cronjob_bandit23`. Có thể thấy nó vẫn thực thi một file shell script theo mỗi phút
 
-![Hinh](img/22_1.png)
+![22_1](img/22_1.png)
 
 Nội dung của file script đại loại gồm 2 bước:
 - *Bước 1*: Thực hiện mã hóa md5 chuỗi `"I am user bandit23"` do biến `myname` ở đây là chính là `bandit23` (Đọc description cũng sẽ hiểu được ý đồ đó). 
 - *Bước 2*: Thực thi câu lệnh ghi password của bandit23 vào file có tên chính là chuỗi md5 đã tạo ở *Bước 1* ở thư mục `/tmp`.
 
-![Hinh](img/22_2.png)
+![22_2](img/22_2.png)
 
 Ta sẽ thực hiện lấy chuỗi md5 cần tìm bằng câu lệnh như hình dưới. Chỉ cần đọc nội dung trong file `\tmp\(md5)` là lấy được password cho bandit23 goy.
 
-![Hinh](img/22_3.png)
+![22_3](img/22_3.png)
 
 > Ta thu được password cho bandit23 : `jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n`
 
@@ -732,19 +732,19 @@ Bài này lại tiếp tục dính đến `cron.d`, và vẫn cách thức tiế
 
 - *Bước 2*: Thực thi một vòng for có chức năng thực thi và đồng thời xóa tất cả các scripts có trong thư mục hiện tại. Tuy nhiên, khi nó gặp script của user `bandit23`, chương trình sẽ timeout **60s** trước khi thực thi nó rồi xóa. 
 
-![Hinh](img/23_1.png)
+![23_1](img/23_1.png)
 
 Như vậy, dựa vào description ta phải tạo một file `script.sh` thuộc `bandit23` rồi nhét qua `/var/spool/bandit24`. Ta tạo một directory `/tmp/file/` để thực hiện lưu đoạn script cần viết vào đó. 
 
-![Hinh](img/23_2.png)
+![23_2](img/23_2.png)
 
 Vậy ý tưởng của file `script.sh` cần viết là gì? Bởi vì ta cần đi tìm password của **bandit24** trong khi các scripts trong `/var/spool/bandit24` sẽ được thực thi bởi user **bandit24**, nên ta cần viết câu lệnh ghi password `cat \etc\bandit_pass\bandit24` như thường lệ vào một file bất kì, ở đây là file `bandit24_pass` nằm trong thư mục `\tmp\file\` luôn.
 
-![Hinh](img/23_3.png)
+![23_3](img/23_3.png)
 
 Sau khi tạo xong đoạn script, ta cần set quyền cho cả thư mục `\tmp\file\` và file `script.sh`, ở đây em cấp full quyền `chmod 777` luôn. Lí do phải làm như vậy để tí nữa, sau khi `script.sh` được thực thi bởi user **bandit24** thì mới thấy file `bandit24_pass` nằm trong thư mục `\tmp\file\`, nếu không sẽ không có.  
 
-![Hinh](img/23_4.png)
+![23_4](img/23_4.png)
 
 Thực hiện copy file `script.sh` sang thư mục `\var\spool\bandit24\` để nó thực thi giùm file `script.sh`. Đợi đúng **60s** thì có file `bandit24_pass` bên thư mục `\tmp\file\`. Giờ thì chỉ có việc `cat` mà xem password nữa hoy.
 
@@ -763,26 +763,26 @@ A daemon is listening on port 30002 and will give you the password for bandit25 
 
 Đọc *Description* ta có thể hiểu rằng, có một service đang thực hiện lắng nghe trên port **30002** có nhiệm vụ trả về password của **bandit25** nếu như truyền cho nó password của **bandit24** cộng với một pincode gồm 4 chữ số. Ta đã có password của **bandit24**, nên chỉ cần **bruteforce** 10000 số của pincode để có được password cho **bandit25**. Chú ý **pincode** và pasword **bandit24** ngăn cách nhau bởi 1 space.
 
-![Hinh](img/24_1.png)
+![24_1](img/24_1.png)
 
 Ta sẽ tạo một thư mục `\tmp\bandit`, thực hiện viết một đoạn code nhỏ thực hiện bruteforce hết 10000 trường hợp có thể xảy ra lưu vào file `wordlist.txt`. Lúc này `wordlist.txt` gồm 10000 dòng, với nội dung của mỗi dòng có format là: `password_bandit24 pincode`.
 
-![Hinh](img/24_2.png)
+![24_2](img/24_2.png)
 
 Thử truyền dòng đầu tiên đến service tại port **30002** thì thấy nó trả về dòng `Wrong! Please enter the correct pincode. Try again.` 
 
-![Hinh](img/24_3.png)
+![24_3](img/24_3.png)
 
 Lần này ta truyền hết nội dung của `wordlist.txt`, ghi kết quả trả về vào `out.txt`.
 
-![Hinh](img/24_4.png)
+![24_4](img/24_4.png)
 
 Bây giờ ta chỉ việc `cat output.txt` để xem password thoii.
 ```console
 cat out.txt | grep "Wrong! Please enter the correct pincode. Try again."
 ```
 
-![Hinh](img/24_5.png)
+![24_5](img/24_5.png)
 > Ta thu được password cho bandit25 : `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
 
 ## Level 25 → 26
@@ -802,7 +802,7 @@ Logging in to **bandit26** from **bandit25** should be fairly easy… The shell 
 
 Sau khi login vào user bandit25, ta thực thi `ls` thì xuất hiện file `bandit26.sshkey` là **private key** để truy cập ssh đến **bandit26**.
 
-![Hinh](img/25_1.png)
+![25_1](img/25_1.png)
 
 Thực hiện kết nối **ssh** đến **bandit26** bằng option `-i`, thì sau khi kết nối thành công thì ngay lập tức bị logout ra ngoài. 
 
@@ -810,11 +810,11 @@ Thực hiện kết nối **ssh** đến **bandit26** bằng option `-i`, thì s
 bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
 ```
 
-![Hinh](img/25_2.png)
+![25_2](img/25_2.png)
 
 Ta đọc **Description** có thể hiểu **login shell** của bandit26 không phải là `/bin/bash`. Khi đó ta sẽ kiểm tra login shell của bandit26 là gì ở file `\etc\passwd` như đã đề cập ở phần **Background**.
 
-![Hinh](img/25_4.png)
+![25_3](img/25_3.png)
 
 Kết quả có thể thấy login shell của bandit26 là `usr/bin/showtext`. Thực hiện đọc file này thì nó thực hiện lệnh `more` file `~/tetx.txt` trên terminal của linux. Ngay sau khi lệnh more được thực thi xong nó sẽ `exit 0`. Đây là lí do mình bị logout lúc nãy.
 
@@ -824,7 +824,7 @@ Tuy nhiên, sử dụng trick về `more` đã nhắc ở **Background**, ta s�
 bandit25@bandit:~$ ssh -i bandit26.sshkey bandit26@localhost
 ```
 
-![Hinh](img/25_3.png)
+![25_4](img/25_4.png)
 
 Lúc này, ta có thể nhấn phím **v** để truy cập editor vim. Tại đây, ta có thể thực thi lệnh, lấy được bash shell bằng cách set biến môi trường **shell** như các lệnh dưới:
 
@@ -839,7 +839,7 @@ Như vậy ta đã truy cập shell thành công dưới quyền thực thi củ
 cat /etc/bandit_pass/bandit26
 ```
 
-![Hinh](img/25_5.png)
+![25_5](img/25_5.png)
 
 
 > Ta thu được password cho bandit26 : `5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z`
@@ -861,7 +861,7 @@ Sau khi đã truy cập được shell trong **bandit26**, ta có thể thấy c
 $ ./bandit27-do cat /etc/bandit_pas/bandit27
 ```
 
-![Hinh](img/26.png)
+![26](img/26.png)
 
 
 > Ta thu được password cho bandit27 : `3ba3118a22e93127a4ed485be72ef5ea`
@@ -877,11 +877,11 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Download repository từ ssh://bandit27-git@localhost/home/bandit27-git/repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled.png>)
+![27_1](img/27_1.png)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%201.png>)
+![27_2](img/27_2.png)
 
 > Ta thu được password cho bandit28 : `0ef186ac70e04ea33b4c1853d2526fa2`
 
@@ -899,23 +899,23 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Download repository từ ssh://bandit28-git@localhost/home/bandit28-git/repo
 
-![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image.png>)
+![28_1](img/28_1.png)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%202.png>)
+![28_2](img/28_2.png)
 
 > Nội dung của file README.md gợi ý cho chúng ta một số thông tin về password nhưng không hữu dụng và cũng không có thư mục nào khác. Nên chúng ta sẽ check lần lượt các commit, tag, nhánh khác và cuối cùng là check các file config của từng nhánh
 
 - Dùng lệnh `git log` để kiểm tra các thông tin đã commit
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%203.png>)
+![28_3](img/28_3.png)
 
 > Từ comment của các phiên bản commit ta có thể thấy được các từ khóa quan trọng như **fix info leak**. Chúng ta nên kiểm tra chi tiết từng phiên bản commit
 
 - Dùng lệnh `git commit <commit id>` để kiểm tra các commit
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%204.png>)
+![28_4](img/28_4.png)
 
 ---
 
@@ -935,23 +935,23 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Download Repository từ ssh://bandit29-git@localhost/home/bandit29-git/repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%205.png>)
+![29_1](img/29_1.png)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%206.png>)
+![29_2](img/29_2.png)
 
 > Nội dung của file README.md có thể gợi ý cho chúng ta biết là password cho user bandit30 không được khởi tạo ở đây. Do trong repo chỉ có file README.md và một số file config được ẩn đi nên chúng ta có thể hiểu là mật khẩu đã được khởi tạo ở một nhánh khác
 
 - Dùng lệnh `git branch -a` để xem toàn bộ nhánh của repository
 
-![image1.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image1.png>)
+![29_3](img/29_3.png)
 
 > Ta thấy được ngoài nhánh master được mặc định tải về còn có các nhánh khác. Ta sẽ tiếp tục chuyển sang các nhánh đó để tìm kiếm thêm thông tin
 
 - Dùng lệnh `git checkout <branch_name>` để kiểm tra từng nhánh
 
-![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image%201.png>)
+![29_4](img/29_4.png)
 
 ---
 
@@ -971,21 +971,21 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Dowload Repository từ ssh://bandit30-git@localhost/home/bandit30-git/repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%207.png>)
+![30_1](img/30_1.png)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![image.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image%202.png>)
+![30_2](img/30_2.png)
 
 > Lần này README.md không cho chúng ta bất cứ thông tin nào về password và cũng không có thư mục nào khác. Nên chúng ta lần lượt check các commit, tag, các nhánh khác và cuối cùng là check các file config của từng nhánh
 
 - Dùng lệnh `git tag -l` để hiện các tag
 
-![image1.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image1%201.png>)
+![30_3](img/30_3.png)
 
 - Dùng lệnh `git show <tag_name>` để hiện thông tin chi tiết về tag
 
-![image2.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image2.png>)
+![30_4](img/30_4.png)
 
 > Ta thu được password cho bandit31: `56a9bf19c63d650ce78e6ec0354ee45e`
 
@@ -1003,11 +1003,11 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Dowload Repository từ ssh://bandit31-git@localhost/home/bandit30-git/repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%208.png>)
+![31_1](img/31_1.png>)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%209.png>)
+![31_2](img/31_2.png>)
 
 > Lần này tác giả yêu câu chúng ta file tạo và đẩy file đó lên repository
 
@@ -1019,15 +1019,15 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Dùng lệnh `echo "May I come in?" > key.txt` để tạo file key.txt
 
-![image1.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image1%202.png>)
+![31_3](img/31_3.png)
 
 - Dùng lệnh `git add -f <file_name>` và `git commit -m <message>` để đánh chỉ mục cho file key.txt sau đó commit
 
-![image2.png](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/image2%201.png>)
+![31_4](img/31_4.png)
 
 - Dùng lệnh `git push` để lưu những thay đổi lên repository
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2010.png>)
+![31_5](img/31_5.png)
 
 > Ta thu được password cho bandit32: 56a9bf19c63d650ce78e6ec0354ee45e
 
@@ -1035,7 +1035,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Đang nhập vào shell và thực hiện một số lệnh để test
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2011.png>)
+![32_1](img/32_1.png)
 
 > Ta nhận thấy các lệnh sẽ được thực thi trong [Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell) (sh) và trước khi được thực thi thì các lệnh sẽ được chuyển thành chữ in hoa.
 
@@ -1043,7 +1043,7 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Sử dụng các biến môi trường như `$HOME`, `$SHELL`,... để kiểm tra tiếp
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2012.png>)
+![32_2](img/32_2.png)
 
 > Ta thấy rằng các biến môi trường sau khi được nhập vào sẽ xử lý như một chuỗi ký tự bình thường và sau đó được đưa vào thực hiện thư một lệnh trong Bourne Shell. Do Vậy ta có thể sử dụng $0 để gọi Bourne Shell
 
@@ -1051,12 +1051,12 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Sử dụng `$0` để gọi Bourne Shell từ shell đang thực thi
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2013.png>)
+![32_3](img/32_3.png)
 
 > Ta đã vào được Bourne Shell và chúng ta cũng biết thêm shell mà chúng ta được vào ban đầu
 
 - Sử dụng lệnh `cat` để đọc password từ user bandit33
 
-![Untitled](<Do%2034%20bandit%20level(27-32)%203c1bcfb48c9e4d7cbdb76b9342dd05e2/Untitled%2014.png>)
+![32_4](img/32_4.png)
 
 > Ta thu được password cho bandit33: `c9c3199ddf4121b10cf581a98d51caee`
