@@ -1003,11 +1003,11 @@ $ ./bandit27-do cat /etc/bandit_pas/bandit27
 
 - Dowload Repository từ ssh://bandit31-git@localhost/home/bandit30-git/repo
 
-![31_1](img/31_1.png>)
+![31_1](img/31_1.png)
 
 - Dùng lệnh `cat` để đọc file README.md trong đường dẫn repo
 
-![31_2](img/31_2.png>)
+![31_2](img/31_2.png)
 
 > Lần này tác giả yêu câu chúng ta file tạo và đẩy file đó lên repository
 
